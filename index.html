@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferando</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/291c2f4fc7.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body" onload="setup()">
+    <!--Header-->
+    <div id="header-container">
+        <i id="logo-icon" class="fas fa-utensils"></i>
+        <span id="logo-label"><b>Lieferando</b>.de</span>
+        <span id="plz-label">12345 Musterstadt</span>
+        <img id="lang-selection" src="res/flag-de.jpg" />
+    </div>
+
+    <div id="main">
+        <!--Restaurant Container-->
+        <div id="restaurant-container">
+            <img id="restaurant-header" src="res/restaurant-header.jpg" />
+            <img id="restaurant-profile-picture" src="res/profile-picture.jpg" />
+
+            <!--Restaurant Infos-->
+            <div class="section-main">
+                <div class="row center">
+
+                    <!--Name & rating-->
+                    <div id="restaurant-info-container" class="column">
+                        <h1 id="restaurant-name"></h1>
+                        <div class="font-14 color-orange">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="font-12">(2,8k) Bewertungen</span>
+                        </div>
+                    </div>
+
+                    <!--Like button-->
+                    <div class="orange-button" onclick="heartRestaurant()">
+                        <i id="heart-button" class="far fa-heart"></i>
+                    </div>
+                </div>
+
+                <span id="restaurant-description" class="font-12 color-gray"></span>
+            </div>
+
+            <!--Categories-->
+            <div id="categories-holder">
+                <div id="categories-header-content" class="row point-out-bg">
+                    <!--Categories header content here-->
+                </div>
+            </div>
+
+            <div id="products-content">
+                <!--Products & categories content here-->
+            </div>
+
+            <a id="back-to-top-button" class="hide" href="#"><i class="fas fa-angle-up"></i></a>
+        </div>
+
+        <!--Basket-->
+        <div id="basket-container">
+            <span id="basket-header-label">Warenkorb</span>
+            <hr />
+
+            <!--Empty Basket-->
+            <div id="empty-basket-container" class="color-gray">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</span>
+            </div>
+
+            <!--Basket Content-->
+            <div id="basket-content" class="column hide">
+                <!--basket content here-->
+            </div>
+
+            <hr />
+            <div class="basket-price-container">
+                <span>Zwischensumme</span>
+                <span id="subtotal">8,49€</span>
+            </div>
+            <div id="delivery-price-container" class="basket-price-container">
+                <span>Lieferkosten</span>
+                <span id="delivery-price">1,00€</span>
+            </div>
+            <div id="basket-total-container" class="basket-price-container">
+                <span>Gesamt</span>
+                <span id="total">9,49€</span>
+            </div>
+            <hr />
+            <span id="minimum-not-reached-label" class="center">Du hast den Mindestbestellwert von 8,49 € erreicht und
+                kannst jetzt fortfahren.</span>
+            <div href="#!" id="order-button">Bestellen</div>
+            <div id="close-basket-button" onclick="closeBasket()"><i class="fas fa-times"></i></div>
+        </div>
+
+        <div id="basket-responsive-button-container" class="hide">
+            <a id="basket-responsive-button" onclick="openBasket()">
+                <i class="fas fa-shopping-bag"><span id="basket-length-repsonsive-span">0</span></i>
+                <span id="basket-responsive-span">Warenkorb (0€)</span>
+            </a>
+        </div>
+
+        <div id="footer" class="center">
+            <span class="padding-15">Ein Restaurant empfehlen</span>
+            <span class="padding-15">Ein Restaurant anmelden</span>
+            <span class="padding-15">Jobs</span>
+            <span class="padding-15">AGB</span>
+            <span class="padding-15">Datenschutzerklärung</span>
+            <span class="padding-15">Impressum</span>
+            <span class="padding-15">Verwendung von Cookies</span>
+            <span class="padding-15">Bug Bounty</span>
+        </div>
+</body>
+
+</html>
+
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="render.js"></script>
+<script type="text/javascript" src="restaurant.js"></script>
